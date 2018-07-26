@@ -1,0 +1,19 @@
+//created on: Jul 13, 2018
+package com.raas.cheap.rules
+
+
+import com.zyngl.raas.poc.api.model.Product
+
+rule "Offer for Silver"
+	when 
+		productObject: Product(type=="silver")
+	then
+		productObject.setDiscount(10);
+	end
+	
+rule "Offer for Copper"
+	when 
+		productObject: Product(type=="copper")
+	then
+		productObject.setDiscount(50);
+	end
