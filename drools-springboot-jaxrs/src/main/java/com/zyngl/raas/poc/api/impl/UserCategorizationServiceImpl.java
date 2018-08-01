@@ -12,7 +12,6 @@ import org.kie.api.builder.KieScanner;
 import org.kie.api.builder.ReleaseId;
 import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import com.zyngl.raas.poc.api.UserCategorizationService;
@@ -26,11 +25,11 @@ public class UserCategorizationServiceImpl implements UserCategorizationService 
     private KieSession kSession;
 
   //RSJ Modification
-    //@Bean(name="rules-session")
+    //@Bean(name="dynamic-session")
     //@Bean
 	public KieSession getKieSession() {
 	   KieServices kieServices = KieServices.Factory.get();
-       ReleaseId releaseId = kieServices.newReleaseId("com.zyngl.raas", "drools-user-kjar", "1.0-SNAPSHOT");
+       ReleaseId releaseId = kieServices.newReleaseId("com.zyngl.raas", "drools-user-kjar", "1.0.0-SNAPSHOT");
 
        // make sure you use "LATEST" version
        KieContainer kieContainer = kieServices.newKieContainer(releaseId);
