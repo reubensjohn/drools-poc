@@ -37,7 +37,7 @@ public class UserCategorizationServiceImpl implements UserCategorizationService 
 
        // Poll every 30 seconds
        KieScanner kieScanner = kieServices.newKieScanner(kieContainer);
-       kieScanner.start(30000L);
+       kieScanner.start(30000L); //TODO instead of polling may be integrate a event bus and react to a rule change event
 
 	   return kSession;
 	}

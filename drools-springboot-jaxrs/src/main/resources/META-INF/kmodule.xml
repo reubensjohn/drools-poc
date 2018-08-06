@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
-   <kbase name="expensiveproductrules" packages="com.raas.expensive.rules">
-        <ksession name="expensiveRulesSession"/>
-   </kbase>
-   <kbase name="cheapproductrules" packages="com.raas.cheap.rules">
-        <ksession name="cheapRulesSession"/>
-   </kbase>
-</kmodule>

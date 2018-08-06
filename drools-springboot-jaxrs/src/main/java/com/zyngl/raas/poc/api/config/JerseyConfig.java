@@ -7,8 +7,6 @@ import org.glassfish.jersey.server.wadl.internal.WadlResource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.zyngl.raas.poc.api.impl.HelloServiceImpl;
-import com.zyngl.raas.poc.api.impl.ProductServiceImpl;
 import com.zyngl.raas.poc.api.impl.UserCategorizationServiceImpl;
 
 import io.swagger.jaxrs.config.BeanConfig;
@@ -46,8 +44,6 @@ public class JerseyConfig extends ResourceConfig {
 
 	//FIXME - every time if I need to add the class here, its not gong to scale
 	private void registerEndpoints() {
-		this.register(HelloServiceImpl.class);
-		this.register(ProductServiceImpl.class);
 		this.register(UserCategorizationServiceImpl.class);
 		
 		this.register(WadlResource.class);
